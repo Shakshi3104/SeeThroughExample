@@ -11,6 +11,8 @@
 		CE380A50270FD8E600E8B5DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380A4F270FD8E600E8B5DE /* ContentView.swift */; };
 		CE380A52270FD8E800E8B5DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE380A51270FD8E800E8B5DE /* Assets.xcassets */; };
 		CE380A55270FD8E800E8B5DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE380A54270FD8E800E8B5DE /* Preview Assets.xcassets */; };
+		CE380A5C270FD8F900E8B5DE /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380A5B270FD8F900E8B5DE /* CameraView.swift */; };
+		CE380A5F270FDDFD00E8B5DE /* OverlayContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE380A5E270FDDFD00E8B5DE /* OverlayContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,11 @@
 		CE380A4F270FD8E600E8B5DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE380A51270FD8E800E8B5DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE380A54270FD8E800E8B5DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE380A5B270FD8F900E8B5DE /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		CE380A5D270FDA6800E8B5DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CE380A5E270FDDFD00E8B5DE /* OverlayContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayContentView.swift; sourceTree = "<group>"; };
+		CE380A60270FE79F00E8B5DE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CE380A61270FE7DC00E8B5DE /* see-through-example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "see-through-example.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +42,8 @@
 		CE380A41270FD8E600E8B5DE = {
 			isa = PBXGroup;
 			children = (
+				CE380A61270FE7DC00E8B5DE /* see-through-example.png */,
+				CE380A60270FE79F00E8B5DE /* README.md */,
 				CE380A4C270FD8E600E8B5DE /* SeeThroughExample */,
 				CE380A4B270FD8E600E8B5DE /* Products */,
 			);
@@ -51,10 +60,13 @@
 		CE380A4C270FD8E600E8B5DE /* SeeThroughExample */ = {
 			isa = PBXGroup;
 			children = (
+				CE380A5D270FDA6800E8B5DE /* Info.plist */,
 				CE380A4D270FD8E600E8B5DE /* SeeThroughExampleApp.swift */,
 				CE380A4F270FD8E600E8B5DE /* ContentView.swift */,
-				CE380A51270FD8E800E8B5DE /* Assets.xcassets */,
+				CE380A5B270FD8F900E8B5DE /* CameraView.swift */,
+				CE380A5E270FDDFD00E8B5DE /* OverlayContentView.swift */,
 				CE380A53270FD8E800E8B5DE /* Preview Content */,
+				CE380A51270FD8E800E8B5DE /* Assets.xcassets */,
 			);
 			path = SeeThroughExample;
 			sourceTree = "<group>";
@@ -137,6 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE380A5C270FD8F900E8B5DE /* CameraView.swift in Sources */,
+				CE380A5F270FDDFD00E8B5DE /* OverlayContentView.swift in Sources */,
 				CE380A50270FD8E600E8B5DE /* ContentView.swift in Sources */,
 				CE380A4E270FD8E600E8B5DE /* SeeThroughExampleApp.swift in Sources */,
 			);
@@ -272,11 +286,14 @@
 				DEVELOPMENT_TEAM = WHBF4Z49B6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SeeThroughExample/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,11 +319,14 @@
 				DEVELOPMENT_TEAM = WHBF4Z49B6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SeeThroughExample/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
