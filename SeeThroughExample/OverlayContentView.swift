@@ -30,9 +30,6 @@ struct TextExampleView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 10)
         }
-        .onTapGesture {
-            UIApplication.shared.dismissKeyboard()
-        }
     }
 }
 

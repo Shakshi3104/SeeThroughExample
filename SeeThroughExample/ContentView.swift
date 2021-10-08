@@ -16,5 +16,9 @@ struct ContentView: View {
             // UI
             OverlayContentView()
         }
+        .onTapGesture {
+            // dismiss keyboard
+            UIApplication.shared.dismissKeyboard()
+        }
     }
 }
